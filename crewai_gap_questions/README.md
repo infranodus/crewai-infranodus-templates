@@ -1,6 +1,6 @@
-# GapAnalysis Crew
+# GapQuestions Crew
 
-Welcome to the GapAnalysis Crew project, powered by [crewAI](https://crewai.com) and [InfraNodus](https://infranodus.com). This template is designed to help you set up a multi-agent AI system with ease, leveraging the powerful and flexible framework provided by crewAI. Our goal is to enable your agents to collaborate effectively on complex tasks, maximizing their collective intelligence and capabilities.
+Welcome to the GapQuestions Crew project, powered by [crewAI](https://crewai.com) and [InfraNodus](https://infranodus.com). This template is designed to help you set up a multi-agent AI system with ease, leveraging the powerful and flexible framework provided by crewAI. Our goal is to enable your agents to collaborate effectively on complex tasks, maximizing their collective intelligence and capabilities.
 
 ## Installation
 
@@ -36,14 +36,14 @@ Rename `.env.sample` to `.env` and add your keys there:
 **Add your `SERPER_API_KEY` into the `.env` file**
 **Add your `INFRANODUS_API_KEY` into the `.env` file** (can be obtained at [https://infranodus.com/api-access](https://infranodus.com/api-access))
 
-- Modify `src/gap_analysis_template/config/agents.yaml` to define your agents
-- Modify `src/gap_analysis_template/config/tasks.yaml` to define your tasks
-- Modify `src/gap_analysis_template/crew.py` to add your own logic, tools and specific args
-- Modify `src/gap_analysis_template/main.py` to add custom inputs for your agents and tasks
+- Modify `src/gap_questions_template/config/agents.yaml` to define your agents
+- Modify `src/gap_questions_template/config/tasks.yaml` to define your tasks
+- Modify `src/gap_questions_template/crew.py` to add your own logic, tools and specific args
+- Modify `src/gap_questions_template/main.py` to add custom inputs for your agents and tasks
 
 ## Set the topic to analyze
 
-**Modify `src/gap_analysis_template/main.py` to set the topic to analyze**
+**Modify `src/gap_questions_template/main.py` to set the topic to analyze**
 
 ```python
 inputs = {
@@ -72,13 +72,13 @@ This example, unmodified, will run the create a `report_today_date.md` file with
 
 ## Understanding Gap Analysis Template Crew
 
-The gap-analysis-template Crew is composed of multiple AI agents, each with unique roles, goals, and tools. These agents collaborate on a series of tasks, defined in `config/tasks.yaml`, leveraging their collective skills to achieve complex objectives. The `config/agents.yaml` file outlines the capabilities and configurations of each agent in your crew.
+The gap-questions-template Crew is composed of multiple AI agents, each with unique roles, goals, and tools. These agents collaborate on a series of tasks, defined in `config/tasks.yaml`, leveraging their collective skills to achieve complex objectives. The `config/agents.yaml` file outlines the capabilities and configurations of each agent in your crew.
 
 In general, the first agent uses AI to generate a list of relevant information about the topic you provide in the `main.py` file.
 
-The second agent then generates an InfraNodus knowledge graph from this topic and then uses the graph to retrieve a structural gap in this graph: the topical clusters that could be better connected. Read more about it at [https://infranodus.com](https://infranodus.com).
+The second agent then generates an InfraNodus knowledge graph from this topic and then uses the graph to generate a research question based on this gap. Read more about it at [https://infranodus.com](https://infranodus.com).
 
-The third agent then uses the graph and the gap to generate a report that shows how the topic could be possibly developed based on bridging that gap.
+The third agent then uses the question to generate a report for how this gap can be developed further.
 
 ## Support
 

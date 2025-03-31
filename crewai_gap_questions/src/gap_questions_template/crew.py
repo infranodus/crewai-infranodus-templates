@@ -5,11 +5,11 @@ from crewai.project import CrewBase, agent, crew, task
 
 import datetime
 
-from .tools.infranodus_gap_finder_tool import InfranodusGapFinderTool
+from .tools.infranodus_question_generator_tool import InfranodusQuestionGeneratorTool
 
 @CrewBase
-class GapAnalysisTemplateCrew:
-    """GapAnalysisTemplate crew"""
+class GapQuestionsTemplateCrew:
+    """GapQuestionsTemplate crew"""
 
   # Learn more about YAML configuration files here:
     # Agents: https://docs.crewai.com/concepts/agents#yaml-configuration-recommended
@@ -28,10 +28,10 @@ class GapAnalysisTemplateCrew:
         )
 
     @agent
-    def gap_finder(self) -> Agent:
+    def question_generator(self) -> Agent:
         return Agent(
-            config=self.agents_config['gap_finder'],
-            tools=[InfranodusGapFinderTool(save_file=True)],
+            config=self.agents_config['question_generator'],
+            tools=[InfranodusQuestionGeneratorTool(save_file=True)],
             verbose=True
         )
 
@@ -65,10 +65,10 @@ class GapAnalysisTemplateCrew:
         )
 
     @task
-    def gap_finder_task(self) -> Task:
+    def question_generator_task(self) -> Task:
         return Task(
-            config=self.tasks_config['gap_finder_task'],
-            agent=self.gap_finder()
+            config=self.tasks_config['question_generator_task'],
+            agent=self.question_generator()
         )
 
 

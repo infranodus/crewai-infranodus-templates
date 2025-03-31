@@ -7,12 +7,12 @@ research_task:
     A list with 10 bullet points of the most relevant information about {topic}
   agent: researcher
 
-gap_finder_task:
+question_generator_task:
   description: >
-    Take the context you have and find a gap in the information provided.
+    Take the context you have and generate a research question that can push it further.
   expected_output: >
-    A single gap identified based on the topical gap discovered.
-  agent: gap_finder
+    A research question that can push the {topic} further.
+  agent: question_generator
 
 reporting_task:
   description: >

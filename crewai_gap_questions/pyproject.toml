@@ -1,9 +1,9 @@
 [project]
-name = "gap_analysis_template"
+name = "gap_questions_template"
 version = "0.1.0"
-description = "gap-analysis-template using crewAI"
+description = "gap-questions-template using crewAI"
 authors = [
-    { name = "Dmitry Paranyushkoin", email = "contact@infranodus.com" },
+    { name = "Dmitry Paranyushkin", email = "contact@infranodus.com" },
 ]
 requires-python = ">=3.10,<=3.13"
 dependencies = [
@@ -12,11 +12,11 @@ dependencies = [
 ]
 
 [project.scripts]
-gap_analysis_template = "gap_analysis_template.main:run"
-run_crew = "gap_analysis_template.main:run"
-train = "gap_analysis_template.main:train"
-replay = "gap_analysis_template.main:replay"
-test = "gap_analysis_template.main:test"
+gap_questions_template = "gap_questions_template.main:run"
+run_crew = "gap_questions_template.main:run"
+train = "gap_questions_template.main:train"
+replay = "gap_questions_template.main:replay"
+test = "gap_questions_template.main:test"
 
 [build-system]
 requires = [

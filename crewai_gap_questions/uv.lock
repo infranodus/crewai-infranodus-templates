@@ -898,7 +898,7 @@ wheels = [
 ]
 
 [[package]]
-name = "gap-analysis-template"
+name = "gap-questions-template"
 version = "0.1.0"
 source = { editable = "." }
 dependencies = [
