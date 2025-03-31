@@ -1,0 +1,25 @@
+research_task:
+  description: >
+    Conduct a thorough research about the following topic: {topic}\n
+    Make sure you find any interesting and relevant information given
+    the current year is {current_year}.
+  expected_output: >
+    A list with 10 bullet points of the most relevant information about {topic}
+  agent: researcher
+
+gap_finder_task:
+  description: >
+    Take the context you have and find a gap in the information provided.
+  expected_output: >
+    A single gap identified based on the topical gap discovered.
+  agent: gap_finder
+
+reporting_task:
+  description: >
+    Review the context you got develop each gap into a report that shows 
+    how the {topic} field could be possibly developed based on bridging that gap.
+  expected_output: >
+    A fully fledged report that summarizes the current research in the {topic} field 
+    and provides a clear and concise overview of the gaps and opportunities.
+    Formatted as markdown without '```'
+  agent: reporting_analyst
