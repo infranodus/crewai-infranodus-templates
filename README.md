@@ -14,6 +14,7 @@ Below we provide some examples of how you can integrate InfraNodus into your Cre
 ## Examples
 
 - [Gap Analysis](https://github.com/infranodus/crewai-infranodus-templates/tree/master/crewai_gap_analysis) — this workflow is built on top of the default CrewAI workflow that creates an outline of any topic using LLM and then provides InfraNodus as a gap research tool to the researcher agent enabling it to generate a gap analysis report.
+- [Gap Questions](https://github.com/infranodus/crewai-infranodus-templates/tree/master/crewai_gap_questions) — this workflow is built on top of the default CrewAI workflow that creates an outline of any topic using LLM and then provides InfraNodus as a gap research tool to the question generator agent enabling it to generate a research question based on the gap identified and then use another agent to propose how this research could be developed.
 
 ## Installation
 

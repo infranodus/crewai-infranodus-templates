@@ -9,17 +9,19 @@ research_task:
 
 question_generator_task:
   description: >
-    Take the context you have and generate a research question that can push it further.
+    Take the context you have and generate a research question from it
+    by sending the context as the text to the question generator tool.
   expected_output: >
     A research question that can push the {topic} further.
   agent: question_generator
 
 reporting_task:
   description: >
-    Review the context you got develop each gap into a report that shows 
-    how the {topic} field could be possibly developed based on bridging that gap.
+    Review the question you have and think of how you can possibly develop the topic of 
+    {topic} by answering this question.
   expected_output: >
-    A fully fledged report that summarizes the current research in the {topic} field 
-    and provides a clear and concise overview of the gaps and opportunities.
+    A concise report that summarizes the current research in the {topic} field 
+    and provides a clear and concise overview of how it can be developed based on the question.
+    Start your response with the question you are answering.
     Formatted as markdown without '```'
   agent: reporting_analyst

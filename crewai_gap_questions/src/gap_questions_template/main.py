@@ -2,7 +2,7 @@
 import sys
 import argparse
 
-from gap_analysis_template.crew import GapAnalysisTemplateCrew
+from gap_questions_template.crew import GapQuestionsTemplateCrew
 
 # This main file is intended to be a way for your to run your
 # crew locally, so refrain from adding necessary logic into this file.
@@ -19,7 +19,7 @@ def run():
         "current_year": 2025,
     }
 
-    GapAnalysisTemplateCrew().crew().kickoff(inputs=inputs)
+    GapQuestionsTemplateCrew().crew().kickoff(inputs=inputs)
 
 
 def train():
@@ -28,7 +28,7 @@ def train():
     """
     inputs = {"topic": "AI LLMs"}
     try:
-        GapAnalysisTemplateCrew().crew().train(
+        GapQuestionsTemplateCrew().crew().train(
             n_iterations=int(sys.argv[1]), filename=sys.argv[2], inputs=inputs
         )
 
@@ -41,7 +41,7 @@ def replay():
     Replay the crew execution from a specific task.
     """
     try:
-        GapAnalysisTemplateCrew().crew().replay(task_id=sys.argv[1])
+        GapQuestionsTemplateCrew().crew().replay(task_id=sys.argv[1])
 
     except Exception as e:
         raise Exception(f"An error occurred while replaying the crew: {e}")
@@ -53,7 +53,7 @@ def test():
     """
     inputs = {"topic": "AI LLMs"}
     try:
-        GapAnalysisTemplateCrew().crew().test(
+        GapQuestionsTemplateCrew().crew().test(
             n_iterations=int(sys.argv[1]), openai_model_name=sys.argv[2], inputs=inputs
         )
 

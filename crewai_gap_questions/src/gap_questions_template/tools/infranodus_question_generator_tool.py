@@ -11,7 +11,7 @@ from crewai_tools import BaseTool
 
 def _save_results_to_file(content: str) -> None:
     """Saves the search results to a file."""
-    filename = f"infranodus_question_generator_{datetime.now().strftime('%Y-%m-%d_%H-%M-%S')}.txt"
+    filename = f"infranodus_question_generator_{datetime.datetime.now().strftime('%Y-%m-%d_%H-%M-%S')}.txt"
     with open(filename, "w") as file:
         file.write(content)
     print(f"Results saved to {filename}")
@@ -28,7 +28,7 @@ class InfranodusQuestionGeneratorToolSchema(BaseModel):
 class InfranodusQuestionGeneratorTool(BaseTool):
     name: str = "Infranodus Question Generator"
     description: str = (
-        "A tool that can be used to generate research questions."
+        "A tool that can be used to generate research questions from text."
     )
     args_schema: Type[BaseModel] = InfranodusQuestionGeneratorToolSchema
 
