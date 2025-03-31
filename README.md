@@ -11,10 +11,16 @@ Its advantage to using a standard LLM for this same purpose is that it uses grap
 
 Below we provide some examples of how you can integrate InfraNodus into your CrewAI workflows.
 
+Learn more on our support portal: [https://support.noduslabs.com/hc/en-us/articles/19311397123996-InfraNodus-Crew-AI-Enhancing-AI-Agent-Workflows-with-Content-Gap-Detection-Research-Questions](https://support.noduslabs.com/hc/en-us/articles/19311397123996-InfraNodus-Crew-AI-Enhancing-AI-Agent-Workflows-with-Content-Gap-Detection-Research-Questions)
+
 ## Examples
 
 - [Gap Analysis](https://github.com/infranodus/crewai-infranodus-templates/tree/master/crewai_gap_analysis) — this workflow is built on top of the default CrewAI workflow that creates an outline of any topic using LLM and then provides InfraNodus as a gap research tool to the researcher agent enabling it to generate a gap analysis report.
+  ![CrewAI InfraNodus Gap Analysis Flow](images/crewai-infranodus-gap-diagram.png)
+
 - [Gap Questions](https://github.com/infranodus/crewai-infranodus-templates/tree/master/crewai_gap_questions) — this workflow is built on top of the default CrewAI workflow that creates an outline of any topic using LLM and then provides InfraNodus as a gap research tool to the question generator agent enabling it to generate a research question based on the gap identified and then use another agent to propose how this research could be developed.
+
+![CrewAI InfraNodus Question Generator Flow](images/crewai-infranodus-question-diagram.png)
 
 ## Installation
 
