@@ -63,14 +63,14 @@ $ crewai run
 or
 
 ```bash
-uv run gap_analysis_template
+uv run gap_questions_template
 ```
 
-This command initializes the gap-analysis-template Crew, assembling the agents and assigning them tasks as defined in your configuration.
+This command initializes the gap-questions-template Crew, assembling the agents and assigning them tasks as defined in your configuration.
 
 This example, unmodified, will run the create a `report_today_date.md` file with the output of a research on LLMs in the root folder.
 
-## Understanding Gap Analysis Template Crew
+## Understanding Gap Questions Template Crew
 
 The gap-questions-template Crew is composed of multiple AI agents, each with unique roles, goals, and tools. These agents collaborate on a series of tasks, defined in `config/tasks.yaml`, leveraging their collective skills to achieve complex objectives. The `config/agents.yaml` file outlines the capabilities and configurations of each agent in your crew.
 
