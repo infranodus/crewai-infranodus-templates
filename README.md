@@ -19,8 +19,7 @@ Learn more on our support portal: [https://support.noduslabs.com/hc/en-us/articl
   ![CrewAI InfraNodus Gap Analysis Flow](images/crewai-infranodus-gap-finder-diagram.png)
 
 - [Gap Questions](https://github.com/infranodus/crewai-infranodus-templates/tree/master/crewai_gap_questions) — this workflow is built on top of the default CrewAI workflow that creates an outline of any topic using LLM and then provides InfraNodus as a gap research tool to the question generator agent enabling it to generate a research question based on the gap identified and then use another agent to propose how this research could be developed.
-
-![CrewAI InfraNodus Question Generator Flow](images/crewai-infranodus-question-diagram.png)
+  ![CrewAI InfraNodus Question Generator Flow](images/crewai-infranodus-question-diagram.png)
 
 ## Installation
 
